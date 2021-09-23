@@ -8,7 +8,6 @@ export const Camera: React.FC = () => {
       position={[0, 0, 1000]}
       near={0.1}
       far={10000}
-      lookAt={[0, 0, 0] as any}
     />
   );
 };
