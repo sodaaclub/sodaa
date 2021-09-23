@@ -1,0 +1,154 @@
+$white: #f2f2f2;
+$grey-900: #393939;
+$blue-600: #2a5c85;
+$accent: #dd61ee;
+
+html,
+body {
+  background: #ffffff;
+  color: #606063;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+
+  --white: #{$white};
+  --grey-900: #{$grey-900};
+  --blue-600: #{$blue-600};
+  --accent: #{$accent};
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Lato", "sans-serif";
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+
+canvas {
+  position: absolute;
+}
+
+.loading {
+  padding: 10px;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.scrollArea {
+  height: 100vh;
+  left: 0;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $grey-900;
+  font-family: "Manrope";
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: 8vh;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 10vh;
+}
+
+h2 {
+  font-size: 5vh;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 6vh;
+}
+
+h3 {
+  font-size: 4vh;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 5vh;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p {
+  color: $grey-900;
+  font-family: "Manrope";
+  font-size: 3vh;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+}
+
+span {
+  font-family: inherit;
+  font-weight: inherit;
+
+  &.accent {
+    color: $accent;
+  }
+
+  &.tech {
+    color: #608938;
+  }
+}
+
+a.inline-link {
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  pointer-events: all;
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.unstyled-button {
+  background-color: transparent;
+  border: 0;
+}
+
+.accessibility-label {
+  position: fixed;
+  left: 4px;
+  bottom: 0;
+}
+
+// Mixins
+$breakpoints: (
+  "mobile": 480px,
+  "tablet": 768px,
+  "laptop": 1200px,
+) !default;
+
+@mixin bp($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@import "./components/pages/pages.scss";
+@import "./components/icons/icons.scss";

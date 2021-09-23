@@ -1,0 +1,126 @@
+.portfolio-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  transition: transform 0.25s ease-in-out;
+  pointer-events: none;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  .bottom-bar {
+    align-items: flex-end;
+    justify-content: space-between;
+    display: flex;
+
+    @include bp("tablet") {
+      flex-direction: column;
+    }
+  }
+
+  .socials {
+    display: flex;
+
+    .icon {
+      height: 60px;
+      margin-right: 16px;
+      pointer-events: all;
+      width: 60px;
+    }
+  }
+
+  .accessibility-info {
+    display: inline;
+  }
+
+  .image-container {
+    pointer-events: all;
+    display: flex;
+    justify-content: flex-start;
+    height: 200px;
+
+    &.other-site-link {
+      height: unset;
+    }
+
+    img {
+      border: 4px solid $grey-900;
+      height: 100%;
+      transition: border-color 0.25s ease-in-out;
+      width: auto;
+
+      &:hover {
+        border-color: $white;
+      }
+    }
+  }
+
+  .others {
+    display: flex;
+    justify-content: space-between;
+
+    @include bp("tablet") {
+      flex-direction: column;
+    }
+
+    .other {
+      width: 30%;
+
+      @include bp("tablet") {
+        margin-bottom: 16px;
+        width: 85%;
+      }
+
+      img {
+        margin-bottom: 16px;
+        width: 100%;
+      }
+    }
+  }
+
+  .photo {
+    img {
+      border: 4px solid $grey-900;
+      margin-bottom: 16px;
+      width: auto;
+    }
+  }
+
+  .books {
+    display: flex;
+    flex-direction: column;
+
+    .book {
+      display: flex;
+      min-height: 200px;
+      flex-direction: row;
+      margin-bottom: 32px;
+
+      @include bp("tablet") {
+        height: auto;
+        align-items: inherit;
+        width: 85%;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 16px;
+
+        @include bp("tablet") {
+          margin-left: 0;
+        }
+      }
+
+      img {
+        height: 200px;
+
+        @include bp("tablet") {
+          display: none;
+        }
+      }
+    }
+  }
+}
