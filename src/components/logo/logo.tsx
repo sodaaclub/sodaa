@@ -1,6 +1,6 @@
 import { useGLTF } from "drei";
 import React, { useMemo, useRef, useState } from "react";
-import { useFrame } from "react-three-fiber";
+import { useFrame, useThree } from "react-three-fiber";
 import { MeshNormalMaterial, Object3D } from "three";
 import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 
@@ -28,6 +28,8 @@ export const Logo: React.FC = () => {
     }
   });
 
+  const { aspect } = useThree();
+
   const regMaterial = useMemo(() => {
     return new MeshNormalMaterial({ wireframe: false });
   }, []);
@@ -44,7 +46,7 @@ export const Logo: React.FC = () => {
         ref={logoRef}
         material={isMouseOver ? wireframeMaterial : regMaterial}
         geometry={logoNodes.BezierCurve004.geometry}
-        scale={[100, 100, 100]}
+        scale={aspect > 1 ? [100, 100, 100] : [40, 40, 40]}
         position={[0, 0, 0]}
         rotation={[Math.PI / 2, -Math.PI / 2, 0.3]}
       ></mesh>
