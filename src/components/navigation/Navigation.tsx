@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GiThirdEye, GiBrassEye } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
 
@@ -28,16 +28,27 @@ const LINKS = [
 export const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const containerRef = useRef<null | HTMLDivElement>(null);
+
   const { pathname } = useLocation();
 
   useEffect(() => {
     if (pathname) {
       setIsOpen(false);
     }
+
+    if (containerRef.current) {
+      setTimeout(() => {
+        containerRef.current?.scrollTo({ top: 0 });
+      }, 300);
+    }
   }, [pathname]);
 
   return (
-    <div className={`navigation-container ${isOpen ? "open" : ""}`}>
+    <div
+      className={`navigation-container ${isOpen ? "open" : ""}`}
+      ref={containerRef}
+    >
       <div className="navigation">
         <button
           onClick={() => setIsOpen((old) => !old)}
