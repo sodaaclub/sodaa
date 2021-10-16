@@ -149,3 +149,5 @@ $breakpoints: (
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+@import "/src/components/navigation/navigation.scss";
