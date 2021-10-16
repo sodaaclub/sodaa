@@ -39,7 +39,6 @@ export const Navigation: React.FC = () => {
   return (
     <div className={`navigation-container ${isOpen ? "open" : ""}`}>
       <div className="navigation">
-        <div className="background" />
         <button
           onClick={() => setIsOpen((old) => !old)}
           className="menu-button"
@@ -50,23 +49,26 @@ export const Navigation: React.FC = () => {
             <GiBrassEye className="icon" />
           )}
         </button>
-        <div className="links">
-          {LINKS.map((link) => {
-            const isActive = pathname === link.path;
-            return (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="link"
-                style={{
-                  borderColor: link.color,
-                  color: isActive ? link.color : "black",
-                }}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+        <div className="links-container">
+          <div className="background" />
+          <div className="links">
+            {LINKS.map((link) => {
+              const isActive = pathname === link.path;
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="link"
+                  style={{
+                    borderColor: link.color,
+                    color: isActive ? link.color : "black",
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
