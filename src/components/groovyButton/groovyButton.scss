@@ -1,0 +1,63 @@
+@keyframes background {
+  0% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(8deg);
+  }
+}
+
+.groovy-button {
+  button {
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    font-size: 60px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .background {
+    animation: background 5s ease-in-out infinite alternate;
+    background-color: $lilac-fill;
+    border: 2px solid $lilac-stroke;
+    border-radius: 50%;
+    content: "";
+    height: 100%;
+    position: absolute;
+    transform: rotate(15deg);
+    width: 100%;
+  }
+
+  &.lilac {
+    .background {
+      background-color: $lilac-fill;
+      border: 2px solid $lilac-stroke;
+    }
+  }
+  &.blue {
+    .background {
+      background-color: $blue-fill;
+      border: 2px solid $blue-stroke;
+    }
+  }
+  &.yellow {
+    .background {
+      background-color: $yellow-fill;
+      border: 2px solid $yellow-stroke;
+    }
+  }
+  &.pink {
+    .background {
+      background-color: $pink-fill;
+      border: 2px solid $pink-stroke;
+    }
+  }
+  &.green {
+    .background {
+      background-color: $green-fill;
+      border: 2px solid $green-stroke;
+    }
+  }
+}

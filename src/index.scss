@@ -1,11 +1,23 @@
+$background: #e0e0e0;
 $white: #f2f2f2;
 $grey-900: #393939;
 $blue-600: #2a5c85;
 $accent: #dd61ee;
 
+$lilac-fill: #eadeff;
+$lilac-stroke: #ac7eff;
+$blue-fill: #e3effe;
+$blue-stroke: #9ac5ff;
+$yellow-fill: #fff3e3;
+$yellow-stroke: #ffbc7a;
+$pink-fill: #ffebf6;
+$pink-stroke: #ffadc1;
+$green-fill: #dcffdc;
+$green-stroke: #40b34f;
+
 html,
 body {
-  background: #ffffff;
+  background: $background;
   color: #606063;
   margin: 0;
   overflow: hidden;
@@ -28,24 +40,6 @@ body {
   font-family: "Lato", "sans-serif";
   font-weight: 300;
   letter-spacing: 0.2px;
-}
-
-canvas {
-  position: absolute;
-}
-
-.loading {
-  padding: 10px;
-  transform: translate3d(-50%, -50%, 0);
-}
-
-.scrollArea {
-  height: 100vh;
-  left: 0;
-  overflow: auto;
-  position: absolute;
-  top: 0;
-  width: 100vw;
 }
 
 h1,
@@ -150,4 +144,10 @@ $breakpoints: (
   }
 }
 
+// components
 @import "/src/components/navigation/navigation.scss";
+@import "/src/components/page/page.scss";
+@import "/src/components/groovyButton/groovyButton.scss";
+
+// pages
+@import "/src/pages/home.scss";
