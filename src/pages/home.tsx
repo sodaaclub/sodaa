@@ -1,7 +1,7 @@
 import { GroovyButton } from "components/groovyButton/groovyButton";
 import React from "react";
 import { Color } from "types/colors";
-import { ReactComponent as LogoPink } from "../assets/temp-logo.svg";
+import Logo from "assets/logo.png";
 
 export const Home: React.FC = () => {
   return (
@@ -80,7 +80,7 @@ export const Home: React.FC = () => {
       >
         About
       </GroovyButton>
-      <LogoPink className="logo" />
+      <img src={Logo} width={700} className="logo" />
     </div>
   );
 };
