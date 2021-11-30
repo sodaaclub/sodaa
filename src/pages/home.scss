@@ -1,10 +1,36 @@
 .home {
-  display: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
   .logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    height: 40%;
+    margin-top: 10px;
+    object-fit: contain;
+
+    @include bp("tablet") {
+      width: 80%;
+    }
+  }
+
+  .manifesto-container {
+    background-color: $lilac-fill;
+    border: 2px solid $lilac-stroke;
+    box-shadow: 0 0 8px $lilac-stroke;
+    border-radius: 20px;
+    padding: 16px;
+    text-align: center;
+    max-width: 75%;
+    margin-top: 100px;
+    margin-bottom: 200px;
+
+    @include bp("tablet") {
+      margin-top: 20px;
+      max-width: 90%;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
   }
 }
