@@ -1,116 +1,128 @@
-import { GroovyButton } from "components/groovyButton/groovyButton";
-import React from "react";
-import { Color } from "types/colors";
 import Logo from "assets/logo.png";
+import Spiral from "assets/molla-puntini.svg";
+import React from "react";
+import Twitter from "assets/twitter.svg";
+import Discord from "assets/discord.svg";
+import Instagram from "assets/instagram.svg";
 
 export const Home: React.FC = () => {
+  const openLink = (link: string) => {
+    window.open(link, "_newtab");
+  };
+
   return (
     <div className="page home">
-      {/* <GroovyButton
-        onClick={() => {
-          console.log("");
-        }}
-        style={{
-          position: "absolute",
-          top: "15%",
-          left: "15%",
-          width: "300px",
-        }}
-        color={Color.BLUE}
-      >
-        Manifesto
-      </GroovyButton>
-      <GroovyButton
-        onClick={() => {
-          console.log("");
-        }}
-        style={{
-          position: "absolute",
-          top: "82%",
-          left: "15%",
-          width: "300px",
-          animationDelay: "-0.4s",
-        }}
-        color={Color.GREEN}
-      >
-        Events
-      </GroovyButton>
-      <GroovyButton
-        onClick={() => {
-          console.log("");
-        }}
-        style={{
-          position: "absolute",
-          top: "20%",
-          left: "75%",
-          width: "300px",
-          animationDelay: "-1.4s",
-        }}
-        color={Color.LILAC}
-      >
-        Contact
-      </GroovyButton>
-      <GroovyButton
-        onClick={() => {
-          console.log("");
-        }}
-        style={{
-          position: "absolute",
-          top: "75%",
-          left: "65%",
-          width: "300px",
-          animationDelay: "3.5s",
-        }}
-        color={Color.PINK}
-      >
-        Archive
-      </GroovyButton>
-      <GroovyButton
-        onClick={() => {
-          console.log("");
-        }}
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "5%",
-          width: "300px",
-          animationDelay: "2.2s",
-        }}
-        color={Color.YELLOW}
-      >
-        About
-      </GroovyButton> */}
-      <img src={Logo} width={700} className="logo" />
-      <div className="manifesto-container">
-        <h1>Manifesto</h1>
-        <p>
-          SODAA are a collective of dreamers. We think about new models of
-          cooperation and how they connect with physical spaces through online
-          and IRL participation.
+      <div className="header-container">
+        <img src={Logo} className="logo" />
+        <img src={Spiral} className="spiral" width="100%" />
+      </div>
+      <div className="staggered-1">
+        <p className="a">Image a music and arts venue</p>
+        <p className="b">
+          funded and operated by it&apos;s{" "}
+          <span className="pink">community</span>,
         </p>
+      </div>
+      <div className="staggered-2">
+        <p className="a">
+          Where every member is <span className="highlight-1">involved</span>
+        </p>
+        <p className="b">
+          in the <span className="highlight-2">decision making process</span>
+        </p>
+      </div>
+      <div className="staggered-3">
+        <p className="a">HOW</p>
+        <p className="b">WOULD</p>
+        <p className="c">THAT</p>
+        <p className="d">WORK</p>
+      </div>
 
+      <div className="staggered-4">
+        <div className="l">
+          <div className="vertical-text">
+            <div className="column">
+              <p className="title">S</p>
+              <p className="vertical">elf</p>
+            </div>
+            <div className="column">
+              <p className="title">O</p>
+              <p className="vertical">rganised</p>
+            </div>
+            <div className="column">
+              <p className="title">D</p>
+              <p className="vertical">ecentralised</p>
+            </div>
+            <div className="column">
+              <p className="title">A</p>
+              <p className="vertical">ccessible</p>
+            </div>
+            <div className="column">
+              <p className="title">A</p>
+              <p className="vertical">rts</p>
+            </div>
+          </div>
+        </div>
+        <div className="r">
+          <p className="b">dreams of applying</p>
+          <p className="c">
+            new mode of <span className="cooperation">cooperation</span>
+          </p>
+          <p className="d">to physical space</p>
+          <p className="e">combining online and IRL participation</p>
+        </div>
+      </div>
+      <div className="staggered-5">
+        <div className="row-1">
+          <p className="a">artists</p>
+          <p className="b">DJs</p>
+          <p className="c">musicians</p>
+          <p className="d">producers</p>
+          <p className="e">coders</p>
+        </div>
+        <div className="row-2">
+          <p className="a">songwriters</p>
+          <p className="b">hackers</p>
+          <p className="c">promoters</p>
+          <p className="d">partygoers</p>
+        </div>
+      </div>
+      <div className="cta-container">
+        <button className="cta" onClick={() => openLink("")}>
+          JOIN US
+        </button>
+      </div>
+      <div className="staggered-6">
+        <div className="l">
+          <p>in building a</p>
+        </div>
+        <div className="r">
+          <p>decentralised governance model for a venue in London</p>
+        </div>
+      </div>
+      <div className="info">
+        <p>Jump into our Discord, attend our meetings</p>
+        <p>panels and parties and help us create a</p>
         <p>
-          Imagine a music venue funded and operated by its community, where
-          every member is involved in the decision-making process. How would
-          that work? What would that sound like?
+          <span className="pink">sustainable and inclusive future</span> for the
+          music scene.
         </p>
-
-        <p>
-          SODAA embraces artists, musicians, DJs, producers, coders,
-          songwriters, promoters, hackers, and partygoers (all others). We think
-          they should communicate, participate, celebrate. SODAA listens to all.{" "}
-        </p>
-
-        <p>
-          We form a community that will develop alternative, decentralised
-          decision making and governance models: new ways of making, showing and
-          listening, new spaces for participation.{" "}
-        </p>
-
-        <p>
-          Jump into our Discord, attend our workshops, panels and parties and be
-          part of creating a sustainable and inclusive music ecology.{" "}
-        </p>
+      </div>
+      <div className="footer">
+        <a href="mailto:hello@sodaa.club" className="link">
+          hello@sodaa.club
+        </a>
+        <div className="icons">
+          <button className="icon-button">
+            <img src={Discord}></img>
+          </button>
+          <button className="icon-button">
+            <img src={Instagram}></img>
+          </button>
+          <button className="icon-button">
+            <img src={Twitter}></img>
+          </button>
+        </div>
       </div>
     </div>
   );

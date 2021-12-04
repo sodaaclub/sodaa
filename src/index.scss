@@ -2,7 +2,7 @@ $background: #e0e0e0;
 $white: #f2f2f2;
 $grey-900: #393939;
 $blue-600: #2a5c85;
-$accent: #dd61ee;
+$accent: #ff5095;
 
 $lilac-fill: #eadeff;
 $lilac-stroke: #ac7eff;
@@ -20,7 +20,7 @@ body {
   background: $background;
   color: #606063;
   margin: 0;
-  // overflow: hidden;
+  overflow-x: hidden;
   padding: 0;
 }
 
@@ -48,7 +48,7 @@ h3,
 h4,
 h5 {
   color: $grey-900;
-  font-family: "Manrope";
+  font-family: "Font";
   margin: 0 0 8px;
 }
 
@@ -77,9 +77,10 @@ h4 {
   font-size: 18px;
 }
 
-p {
+p,
+a {
   color: $grey-900;
-  font-family: "Manrope";
+  font-family: "Font";
   font-size: 3vh;
   font-weight: 500;
   margin: 0 0 8px 0;
@@ -123,7 +124,7 @@ a.inline-link {
 
 @font-face {
   font-family: "Font";
-  src: local("Font"), url(./assets/CothamSans.otf) format("opentype");
+  src: local("Font"), url(./assets/Montaga-Regular.ttf) format("truetype");
 }
 
 // Mixins
