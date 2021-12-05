@@ -14,13 +14,12 @@ export const Home: React.FC = () => {
     <div className="page home">
       <div className="header-container">
         <img src={Logo} className="logo" />
-        <img src={Spiral} className="spiral" width="100%" />
       </div>
       <div className="staggered-1">
         <p className="a">Image a music and arts venue</p>
         <p className="b">
-          funded and operated by it&apos;s{" "}
-          <span className="pink">community</span>,
+          funded and operated by its{" "}
+          <span className="pink bold">community</span>,
         </p>
       </div>
       <div className="staggered-2">
@@ -28,14 +27,14 @@ export const Home: React.FC = () => {
           Where every member is <span className="highlight-1">involved</span>
         </p>
         <p className="b">
-          in the <span className="highlight-2">decision making process</span>
+          in the <span className="highlight-2">decision making process.</span>
         </p>
       </div>
       <div className="staggered-3">
         <p className="a">HOW</p>
         <p className="b">WOULD</p>
         <p className="c">THAT</p>
-        <p className="d">WORK</p>
+        <p className="d">WORK?</p>
       </div>
 
       <div className="staggered-4">
@@ -68,8 +67,8 @@ export const Home: React.FC = () => {
           <p className="c">
             new mode of <span className="cooperation">cooperation</span>
           </p>
-          <p className="d">to physical space</p>
-          <p className="e">combining online and IRL participation</p>
+          <p className="d">to physical spaces</p>
+          <p className="e">combining online and IRL participation.</p>
         </div>
       </div>
       <div className="staggered-5">
@@ -101,7 +100,7 @@ export const Home: React.FC = () => {
         </div>
       </div>
       <div className="info">
-        <p>Jump into our Discord, attend our meetings</p>
+        <p>Jump into our Discord, attend our meetings,</p>
         <p>panels and parties and help us create a</p>
         <p>
           <span className="pink">sustainable and inclusive future</span> for the

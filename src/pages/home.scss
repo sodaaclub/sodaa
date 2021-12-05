@@ -114,10 +114,21 @@
     .d {
       transform: translateY(10px);
     }
+
+    .a,
+    .b,
+    .c,
+    .d {
+      font-style: italic;
+    }
   }
 
   .pink {
     color: $accent;
+  }
+
+  .bold {
+    font-weight: bold;
   }
 
   .staggered-4 {
@@ -150,6 +161,10 @@
         writing-mode: vertical-rl;
         text-orientation: upright;
       }
+    }
+
+    .cooperation {
+      color: #fc8466;
     }
 
     .a {
@@ -253,6 +268,10 @@
       padding: 20px;
       text-align: center;
       width: 480px;
+
+      p {
+        font-weight: bold;
+      }
     }
   }
 
