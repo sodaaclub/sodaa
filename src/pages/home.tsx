@@ -1,5 +1,4 @@
 import Logo from "assets/logo.png";
-import Spiral from "assets/molla-puntini.svg";
 import React from "react";
 import Twitter from "assets/twitter.svg";
 import Discord from "assets/discord.svg";
