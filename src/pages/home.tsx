@@ -86,7 +86,7 @@ export const Home: React.FC = () => {
         </div>
       </div>
       <div className="cta-container">
-        <button className="cta" onClick={() => openLink("")}>
+        <button className="cta" onClick={() => openLink("https://discord.gg/XEYs52wbKE")}>
           JOIN US
         </button>
       </div>
@@ -111,13 +111,13 @@ export const Home: React.FC = () => {
           hello@sodaa.club
         </a>
         <div className="icons">
-          <button className="icon-button">
+          <button className="icon-button" onClick={() => openLink("https://discord.gg/XEYs52wbKE")}>
             <img src={Discord}></img>
           </button>
-          <button className="icon-button">
+          <button className="icon-button" onClick={() => openLink("https://www.instagram.com/sodaa.club/")}>
             <img src={Instagram}></img>
           </button>
-          <button className="icon-button">
+          <button className="icon-button" onClick={() => openLink("https://twitter.com/sodaaclub")}>
             <img src={Twitter}></img>
           </button>
         </div>
