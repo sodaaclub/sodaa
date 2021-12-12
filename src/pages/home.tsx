@@ -15,7 +15,7 @@ export const Home: React.FC = () => {
         <img src={Logo} className="logo" />
       </div>
       <div className="staggered-1">
-        <p className="a">Image a music and arts venue</p>
+        <p className="a">Imagine a music and arts venue</p>
         <p className="b">
           funded and operated by its{" "}
           <span className="pink bold">community</span>,
@@ -64,7 +64,7 @@ export const Home: React.FC = () => {
         <div className="r">
           <p className="b">dreams of applying</p>
           <p className="c">
-            new mode of <span className="cooperation">cooperation</span>
+            new modes of <span className="cooperation">cooperation</span>
           </p>
           <p className="d">to physical spaces</p>
           <p className="e">combining online and IRL participation.</p>
